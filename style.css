@@ -1,0 +1,161 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html, body{
+	height: 100%;
+	padding: 20px;
+}
+body{
+	background-color: #232323;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+	font-family: 'Poppins',Arial,sans-serif;
+}
+
+
+.box{
+	padding: 15px;
+	border-radius: 5px;
+	background-color: #050505;
+	color: #E41802;
+	width: 300px;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 5px #121212;
+}
+.box .title{
+	text-align: center;
+	font-size: 1.6em;
+}
+
+.switch-input, .num-input{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 10px 0;
+}
+.switch-input p, .num-input p{
+	font-size: 25px;
+	width: 90px;
+	position: relative;
+}
+.switch{
+	height: 20px;
+	width: 50px;
+	border-radius: 10px;
+	background-color: #E46557;
+	border: none;
+	outline: none;
+	position: relative;
+	transition: background-color 0.25s;
+}
+.switch-input p:after, .num-input p:after{
+	content: ':';
+	position: absolute;
+	right: 0;
+	color: #E41802;
+}
+.switch:before{
+	content: '';
+	display: inline-block;
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	background-color: #E41802;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	transition: left 0.25s;
+}
+.switch-input.active .switch{
+	background-color: #EB3B28;
+}
+.switch-input.active .switch:before{
+	left: calc(100% - 25px);
+}
+
+
+.btn{
+	border-radius: 3px;
+	background: linear-gradient(#E41802, #C11401);
+	border: none;
+	outline: none;
+	color: #fff;
+	text-transform: uppercase;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+	padding: 5px 10px;
+	font-size: 1em;
+	transition: background 0.2s;
+}
+.btn:hover{
+	background: linear-gradient(#C41401, #AC1100);
+}
+.gen-btn{
+	margin-top: 10px;
+	width: 100%;
+	font-size: 1.2em;
+	padding: 10px;
+}
+
+
+
+.prev{
+	border-left: 3px solid #E41802;
+	padding-left: 10px;
+	margin: 10px 0;
+}
+.prev input{
+	width: calc(100% - 10px);
+	padding: 7.5px 5px;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	background-color: #3B3B3B;
+	color: #fff;
+}
+#prev{
+	margin-bottom: 5px;
+}
+.prev button{
+	margin-top: 10px;
+	width: 80px;
+}
+
+.num-input input{
+	border: none;
+	outline: none;
+	width: 44px;
+	height: 30px;
+	border-radius: 20px;
+	border: 3px solid #E41802;
+	color: #E41802;
+	text-align: center;
+	background: transparent;
+}
+
+
+ul{
+	list-style: none;
+	font-size: 18px;
+	margin: 10px 0;
+}
+li.name{
+	text-decoration: underline;
+}
+
+
+
+@media(max-width: 800px){
+	.box{
+		width: 60%;
+	}
+}
+@media(max-width: 500px){
+	.box{
+		width: 80%;
+	}
+}

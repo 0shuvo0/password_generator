@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#080808">
+	<meta name="author" content="MdShuvo">
+	<meta name="robots" content="index, follow" />
+	<link rel="stylesheet" href="style.css">
+	<title>PasswordGenerator</title>
+</head>
+<body>
+	<div class="box">
+		<p class="title">Generate Password</p>
+		<div class="prev">
+			<input type="text" placeholder="Password Preview" id="prev">
+			<input type="text" placeholder="Save As" id="sa">
+			<button class="btn copy">copy</button>
+			<button class="btn save">save</button>
+		</div>
+		<form>
+			<div class="switch-input">
+				<p>A-Z</p>
+				<button class="switch"></button>
+			</div>
+			<div class="switch-input active">
+				<p>a-z</p>
+				<button class="switch"></button>
+			</div>
+			<div class="switch-input active">
+				<p>0-9</p>
+				<button class="switch"></button>
+			</div>
+			<div class="switch-input">
+				<p>Sym.</p>
+				<button class="switch"></button>
+			</div>
+			<div class="num-input">
+				<p>Length</p>
+				<input type="number" min="1" max="50" value="12">
+			</div>
+			<button class="gen-btn btn">Generate</button>
+		</form>
+	</div>
+	
+	<div class="box">
+		<p class="title">Saved Passwords</p>
+		<div class="spwds">
+			
+		</div>
+	</div>
+<script src="main.js"></script>
+</body>
+</html>
